@@ -1,5 +1,5 @@
 async def send_react(message):
-    if not ENABLE_REACTIONS:
+    if not ENABLE_REACTIONS: False
         return
     try:
         chat_id = int(message.chat.id)
