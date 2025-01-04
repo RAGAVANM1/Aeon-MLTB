@@ -1,9 +1,6 @@
-from random import choice
-
-from bot import LOGGER, bot
-
-
 async def send_react(message):
+    if not ENABLE_REACTIONS:
+        return
     try:
         chat_id = int(message.chat.id)
         chat_info = await bot.get_chat(chat_id)
